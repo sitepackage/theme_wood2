@@ -1464,8 +1464,9 @@ form .hint_area {
 	margin:0;
 }
 #collection .subcategory a{
+  display: inline-block;
 	padding:1px 5px;
-	margin:5px 10px 5px 0;
+	margin:0 10px 10px 0;
 	background-color:#f0e4d9;
 }
 #collection .subcategory a:hover{
