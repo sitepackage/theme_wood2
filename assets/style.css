@@ -1516,30 +1516,23 @@ form .hint_area {
 }
 #collection .buy {
 	float: right;
-	margin: 6px 30px 0 0;
 }
 #collection .buy a .view{
-	text-align:center;
-	font-size:0.85em;
-	border: 0;
-	margin:0.3em 0 0 0;
-	padding: 0.2em 0.6em;
-	cursor: pointer;
 	display:block;
-	color:#fff;
-	background-color:#BA9989;
-	border-radius:3px;
+	width: 39px;
+	height: 16px;
+	border: 0;
+	margin: 10px 15px 0 0;
+	padding: 0;
+	cursor: pointer;
+	background-position: -37px -84px;
 }
-#collection .buy a:hover .view{
-	padding: 0.2em 0.6em;
-	color:#fff;
-	background-color:#946A55;
-}
+
 #collection .buy .add_to_cart {
 	width: 27px;
 	height: 25px;
 	border: 0;
-	margin: 0;
+	margin: 6px 30px 0 0;
 	padding: 0;
 	cursor: pointer;
 	background-position: 0 -77px;

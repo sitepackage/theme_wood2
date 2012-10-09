@@ -26,6 +26,7 @@
         <ul>
           <li>
             [%- if product.variants.size == 1 %]
+              [% product.options.join(' / ') %]      
               [% variant = product.variants.first %]
               [% variant.name | html %]
               [%- if variant.price != "0.00" %]                   
