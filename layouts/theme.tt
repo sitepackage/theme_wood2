@@ -268,20 +268,21 @@
           </div>
           [%- end %]          
           
-          <div class="sidebar banner_wrapper">
-            [% '<span class="banners signup"></span>' | link_to ('/customer/signup') if !customer.is_logged_in%]
-            [% '<span class="banners contact"></span>' | link_to settings.contact_uri if settings.contact_uri %]
-            [% '<span class="banners how_to_buy"></span>' | link_to settings.how_to_buy_uri if settings.how_to_buy_uri %]
-            [% '<span class="banners notify_payment"></span>' | link_to settings.notify_payment_uri if settings.notify_payment_uri %]
-            [%- if linklists.sidebar.links.size %]
-            <ul>
-              [%- foreach link in linklists.sidebar.links %]
+        <div class="sidebar banner_wrapper">
+          [% '<span class="banners signup"></span>' | link_to ('/customer/signup') if !customer.is_logged_in%]              
+          [% '<span class="banners contact"></span>' | link_to settings.contact_uri if settings.contact_uri %]  
+          [% '<span class="banners how_to_buy"></span>' | link_to settings.how_to_buy_uri if settings.how_to_buy_uri %]        
+          [% '<span class="banners notify_payment"></span>' | link_to settings.notify_payment_uri if settings.notify_payment_uri %]                 
+          [%- if linklists.${settings.linklist_banner}.links.size %]
+          [%- links = linklists.${settings.linklist_banner}.links %]
+            [%- foreach link in links %]
+              <ul>
               [%- link.name = link.name | html %]
               <li>[% link.featured_image.src | image_uri | image_tag | link_to (link.uri, link.name, link.target) %]</li>
-              [%- end %]
-            </ul>
-            [%- end %]
-          </div>
+              </ul>
+            [%- end %]               
+          [%- end %]
+        </div>                   
 
           [%- if settings.stats_enabled %]       
           <div class="sidebar widgets stats">
